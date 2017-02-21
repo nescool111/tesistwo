@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <security:http use-expressions="true">
+        <security:access-denied-handler error-page="/denied" />
+        <security:form-login login-page="/web/login" authentication-failure-url="/web/login?login_error=true" />
+    
+        <security:intercept-url pattern="/home**" access="isAuthenticated()" />
+        <security:logout/>
+    </security:http>
+    
+    <bean id="securityService" class="com.coophorizontal.services.security.impl.SecurityServiceImpl"></bean>
+
+    <security:authentication-manager>
+        <security:authentication-provider ref="securityService"/>
+        <!--<security:authentication-provider ref="socialAuthenticationProvider" />-->
+    </security:authentication-manager>
+    
+    <!--<bean id="socialAuthenticationProvider" class="org.springframework.social.security.SocialAuthenticationProvider">
+        <constructor-arg index="0" ref="usersConnectionRepository"/>
+        <constructor-arg index="1" ref="socialUserDetailsService"/>
+    </bean>
+    
+    <bean id="socialUserDetailsService" class="com.dot.uffmobile.services.security.impl.SimpleSocialUserDetailsService">
+        <constructor-arg index="0" ref="securityService" />
+    </bean>-->
+
+</beans>

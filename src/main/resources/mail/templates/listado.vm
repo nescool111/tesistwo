@@ -1,0 +1,13 @@
+<div>
+
+<br>
+
+${usuario.correoElectronico}, ${usuario.nombre}
+
+<br>
+
+${usuario.correoElectronico}, ${usuario.nombre}
+
+<br>
+
+</div>
