@@ -62,6 +62,9 @@ Author     : nalvarez
                             <a href="#page-top"></a>
                         </li>
                         <li>
+                            <a class="page-scroll" href="#login">Login</a>
+                        </li>
+                        <li>
                             <a class="page-scroll" href="#register">Registro</a>
                         </li>
                         <li>
@@ -99,6 +102,19 @@ Author     : nalvarez
         </header>
 
         
+     
+             <!-- About register -->
+        <section id="login" class="container content-section text-center">
+            <div class="download-section">
+                  <div class="container">
+                    <h2>Login</h2>
+                    <p>El operador logístico podrá acceder a la aplicación aquí</p>
+                    <a href="web/login" class="btn btn-default btn-lg">Login</a>
+                    <p>-</p>
+                </div>
+            </div>
+        </section>
+        
         
         
         <!-- About register -->
@@ -118,7 +134,7 @@ Author     : nalvarez
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Acerca de HoriCoop</h2>
-                    <p>HoriCoop es el prototipo creado para el proyecto de investigaci&oacute;n enfocado en Cooperaci&oacute;n horizontal . Puede obtener la informaci&oacute;n de distintas plataformas de Comercio electr&oacute;nico, simple y f&aacute;cil de usar, importando la informaci&oacute;n referente al transporte de mercanc&iacute;a de: <a href="http://190.147.21.171:81/prestashopstore/">Prestashop</a>,<a href="http://190.147.21.171:81/magentostore/"> Magento</a>  y <a href="http://190.147.21.171:81/opencartstore/">OpenCart</a>.</p>
+                    <p>HoriCoop es el prototipo creado para el proyecto de investigaci&oacute;n enfocado en Cooperaci&oacute;n horizontal . Puede obtener la informaci&oacute;n de distintas plataformas de Comercio electr&oacute;nico, simple y f&aacute;cil de usar, importando la informaci&oacute;n referente al transporte de mercanc&iacute;a de: <a href="http://horicoop.info/prestashop/">Prestashop</a>,<a href="http://www.horicoop.info/magento"> Magento</a>  y <a href="http://horicoop.info/opencart/">OpenCart</a>.</p>
                     <p>Facilitando al operador log&iacute;stico obtener la informaci&oacute;n referente al transporte de mercanc&iacute;a, de manera f&aacute;cil y r&aacute;pida.</p>
                     <p>-</p>
                 </div>
@@ -132,7 +148,7 @@ Author     : nalvarez
                     <div class="col-lg-8 col-lg-offset-2">
                         <h2>Aplicaci&oacute;n movil</h2>
                         <p>Puedes descargar la aplicaci&oacute;n gratis siguiendo el siguiente enlace:</p>
-                        <a href="http://190.147.21.171:81/prestashopstore/" class="btn btn-default btn-lg">Visita la P&aacute;gina de descargas</a>
+                        <a href="http://horicoop.info/prestashop/" class="btn btn-default btn-lg">Visita la P&aacute;gina de descargas</a>
                     </div>
                 </div>
             </div>
