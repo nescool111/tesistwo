@@ -1,6 +1,10 @@
 package com.coophorizontal.controllers;
 
 import com.coophorizontal.dtos.UsuarioDto;
+import com.coophorizontal.dtos.ProductoMagDto;
+import com.coophorizontal.dtos.ProductoPreDto;
+import com.coophorizontal.dtos.ProductoOpeDto;
+
 import com.coophorizontal.entities.Ciudad;
 import com.coophorizontal.entities.Departamento;
 import com.coophorizontal.entities.Usuario;
@@ -91,25 +95,26 @@ public class HomeController {
         return new Gson().toJson(result);
     }
 
-    
+     //List<ProductoMagDto> ingredientsList= new  ArrayList<ProductoMagDto>(); 
     
         @RequestMapping(value = "/web/productos", method = {RequestMethod.POST, RequestMethod.GET})
     public ModelAndView getProductos(HttpServletRequest request) {
         // Usuario user = securityService.getCurrentUser();
         ModelAndView mav = new ModelAndView("/web/productos");
         //mav.addObject("user", user.getNombre());
+    /*ProductoMagDto i= new ProductoMagDto.
+    *ingredientsList.add(i);
+    Ingredient i1= new Ingredient("bar");   
+    ingredientsList.add(i1);*/
+
         return mav;
     }
+    
     
     @RequestMapping(value = "/ajax/acceder", method = {RequestMethod.POST, RequestMethod.GET})
     @ResponseBody
     public String iraProductos(@ModelAttribute("acceder") UsuarioDto usuarioDto, HttpServletRequest request, HttpServletResponse response) {
         Map result = new HashMap();
-
-       /*Usuario usuario = new Usuario();
-        EntityReflection.updateEntity(usuarioDto, usuario);
-        usuario.setDepartamento(departamento);
-        usuario.setCiudad(ciudad)*/
         Usuario usuarioSesion=null;
         usuarioSesion=usuarioService.findUniqueByParameter("correoElectronico", request.getParameter("j_username"));
         if (usuarioSesion!=null) {
@@ -121,11 +126,7 @@ public class HomeController {
         } else {
             result.put("respuesta", "3");
         }
-       
-        
-        
         return new Gson().toJson(result);
     }
-    
     
 }
