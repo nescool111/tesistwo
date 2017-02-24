@@ -64,6 +64,7 @@ Author     : nalvarez
                                     </div>
                                 </div>
                                  </br>
+                                 </br>
                                 <div class="col-md-12">
                                     <div class="input-field">
                                         <span class="icon-llave icons-form prefix invertido"></span>
@@ -75,15 +76,19 @@ Author     : nalvarez
                             </br>
                             <div style="margin: auto 1em; display: inline-block;">
                                 <div class="row btn-ingresar pass-forget " >
-                                    <div class="btn-pay col-md-8 col-centered top-form20">  
+                                    <div class="btn-pay col-md-12 col-centered top-form20">  
                                         <p><a onclick="autenticacionUsuario.changeForm('changePasswordDiv')" href="javascript:void(0);">&iquest;Olvidaste tu contrase&ntilde;a?</a></p>
                                         <a id="linkIngresar" href="#"  class="btn btn-default btn-lg">ingresar</a>
                                     </div>
                                     
                                      </br>
-                                    <div class="btn-pay col-md-8 col-centered top-form20">  
+                                      <div style="margin: auto 1em; display: inline-block;">
+                                           </div>
+                                     </br>
+                                    <div class="btn-pay col-md-12 col-centered top-form20">  
                                         <a id="linkIngresar" href="<%=request.getContextPath()%>"  class="btn btn-default btn-lg">Volver</a>
                                     </div>
+                                     </div>
                                 </div>
 
                             </div>
